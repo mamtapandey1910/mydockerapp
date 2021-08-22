@@ -18,7 +18,7 @@ pipeline {
       }
       stage ('deploy'){
         steps {
-           sh '/Users/mamtapandey/djangoapp/dockerpractice/myfirstapp/docker-compose up'
+           sh 'docker-compose up'
         }
       }
       stage ('validate'){
