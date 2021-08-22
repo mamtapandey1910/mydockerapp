@@ -8,7 +8,6 @@ pipeline {
       }
       stage ('build'){
         steps {
-          export PATH=$PATH:/usr/local/bin
           sh 'docker build -t myfirstimage:latest .'
         }
       }
