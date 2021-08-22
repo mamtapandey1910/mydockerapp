@@ -1,9 +1,9 @@
 pipeline {
   agent any 
     stages {
-      stage ('checkout scm'){
+      stage ('checkout'){
         steps {
-          git branch: 'master', url: 'https://github.com/mamtapandey1910/mydockerapp.git'
+          git branch: 'main', url: 'https://github.com/mamtapandey1910/mydockerapp.git'
         }
       }
       stage ('build'){
