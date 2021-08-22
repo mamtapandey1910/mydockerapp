@@ -18,7 +18,7 @@ pipeline {
       }
       stage ('deploy'){
         steps {
-           sh 'echo "Hello deploy"'
+           sh '/usr/local/bin/docker-compose up"'
         }
       }
       stage ('validate'){
