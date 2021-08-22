@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+    web:
+      build: .
+      command: python manage.py runserver 0.0.0.0:8000
+      ports:
+        - "8000:8000"
+      volumes:
+        - .:/myapp
+      depends_on:
+        - db
+      networks:
+        - webappnet
+
+    db:
+      image: mysql
+      volumes:
+        - .database:/var/lib/mysql
+      networks:
+        - webappnet
+      ports:
+        - "3306:3306"
+      environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=dockerappdata
+
+networks:
+    webappnet:
+
+volumes:
+    database:
