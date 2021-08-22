@@ -18,7 +18,7 @@ pipeline {
       }
       stage ('deploy'){
         steps {
-           sh 'docker-compose up'
+           sh '/Applications/Docker.app/Contents/Resources/bin/docker-compose up'
         }
       }
       stage ('validate'){
