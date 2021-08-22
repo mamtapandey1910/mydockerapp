@@ -8,7 +8,7 @@ pipeline {
       }
       stage ('build'){
         steps {
-          sh 'docker build -t myfirstimage:latest .'
+          sh '/usr/local/bin/docker build -t myfirstimage:latest .'
         }
       }
       stage ('image security scan'){
