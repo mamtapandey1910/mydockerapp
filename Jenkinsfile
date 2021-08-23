@@ -19,19 +19,14 @@ pipeline {
            sh 'echo "Hello image"'
         }
       }
-      stage ('deploy'){
-        steps {
-           sh 'docker-compose up'
-        }
-      }
       stage ('validate'){
         steps {
           sh 'curl http://127.0.0.1:8080/note/'
         }
       }
-      stage ('post'){
+      stage ('deploy'){
         steps {
-           sh 'echo "Hello post"'
+           sh 'docker-compose up'
         }
       }
     }
