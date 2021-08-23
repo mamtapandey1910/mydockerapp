@@ -1,4 +1,7 @@
 pipeline {
+  environment {
+    PATH = "$PATH:/usr/local/bin/"
+  }
   agent any 
     stages {
       stage ('checkout'){
@@ -8,7 +11,7 @@ pipeline {
       }
       stage ('build'){
         steps {
-          sh '/usr/local/bin/docker build -t myfirstimage:latest .'
+          sh 'docker build -t myfirstimage:latest .'
         }
       }
       stage ('image security scan'){
