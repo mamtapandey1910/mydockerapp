@@ -18,7 +18,7 @@ pipeline {
       }
       stage ('deploy'){
         steps {
-           sh 'python3 install pip'
+           sh 'python install pip'
            sh 'pip install -r requirements.txt'
            sh 'python3 manage.py runserver'
         }
