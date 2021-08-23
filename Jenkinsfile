@@ -18,7 +18,7 @@ pipeline {
       }
       stage ('deploy'){
         steps {
-           sh '/Users/mamtapandey/djangoapp/dockerpractice/myfirstapp/python manage.py runserver'
+           sh 'python manage.py runserver'
         }
       }
       stage ('validate'){
