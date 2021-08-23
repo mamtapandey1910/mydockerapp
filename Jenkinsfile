@@ -18,7 +18,7 @@ pipeline {
       }
       stage ('deploy'){
         steps {
-           sh 'python manage.py runserver'
+           sh 'python3 manage.py runserver'
         }
       }
       stage ('validate'){
