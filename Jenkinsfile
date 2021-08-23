@@ -23,7 +23,7 @@ pipeline {
       }
       stage ('validate'){
         steps {
-          sh 'curl http://127.0.0.1:8000/note/'
+          sh 'curl http://127.0.0.1:8080/note/'
         }
       }
       stage ('post'){
