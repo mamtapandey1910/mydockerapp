@@ -18,9 +18,7 @@ pipeline {
       }
       stage ('deploy'){
         steps {
-           sh 'python install pip'
-           sh 'pip install -r requirements.txt'
-           sh 'python3 manage.py runserver'
+           sh '/usr/local/bin/docker run -itd -p 8000:8000 myfirstimage'
         }
       }
       stage ('validate'){
