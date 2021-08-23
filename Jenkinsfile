@@ -21,7 +21,7 @@ pipeline {
       }
       stage ('deploy'){
         steps {
-           sh '/usr/local/bin/docker run -itd -p 8000:8000 myfirstimage'
+           sh 'docker-compose up'
         }
       }
       stage ('validate'){
